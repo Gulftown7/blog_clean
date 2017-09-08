@@ -1,5 +1,7 @@
 
 from django.http.response import HttpResponse
+from django.shortcuts import render
+
 
 
 # Create your views here.
@@ -7,10 +9,26 @@ def post_create(request):
     return HttpResponse("<h1>Create</h1>")
 
 def post_detail(request):
-    return HttpResponse("<h1>Detail</h1>")
+    context = {
+        "title": "Detail"
+    }
+    return render(request, "index.html", context )
+    
 
 def post_list(request):
-    return HttpResponse("<h1>List</h1>")
+    context = {
+        "title": "List"
+    }
+#     if request.user.is_authenticated():
+#         context = {
+#             "title": "User is authenticated. Template works!"
+#         }
+#     else:
+#         context = {
+#             'title': 'Not authenticated. Template not works.'
+#         }       
+    return render(request, "index.html", context)
+#     return HttpResponse("<h1>List</h1>")
 
 def post_update(request):
     return HttpResponse("<h1>Update</h1>")
