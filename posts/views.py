@@ -13,19 +13,19 @@ def post_create(request):
     return HttpResponse("<h1>Create</h1>")
 
 def post_detail(request):
-    instance = get_object_or_404(Post, id=1)
+    instance = get_object_or_404(Post, id=2)
     context = {
+        "title": "Post detail",
         "instance": instance,
-        "title": instance.title
     }
-    return render(request, "post_detail.html", context )
+    return render(request, "post_detail.html", context)
     
 
 def post_list(request):
     queryset = Post.objects.all()
     context = {
         "object_list": queryset,
-        "title": "List"
+        "title": "Post list"
     }
 #     if request.user.is_authenticated():
 #         context = {

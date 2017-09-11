@@ -2,20 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template Gulftown</title>
+    <title>Post detail</title>
   </head>
   <body>
     <h1>{{ title }}</h1>
-    <div class="">
 
+    {% for instance in object_list %}
 
-      {{ instance.title }}<br>
-      {{ instance.id }}<br>
-      {{ instance.content }}<br>
-      {{ instance.timestamp }}<br>
-      {{ instance.updated }}<br><br><br>
+    {{ instance.id }}<br>
+    {{ instance.content }}<br>
+    {{ instance.timestamp }}<br>
+    {{ instance.updated }}<br><br><br>
 
-
-    </div>
+    {%  endfor %}
   </body>
 </html>

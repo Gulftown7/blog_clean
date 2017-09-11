@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template Gulftown</title>
+    <title>Post list</title>
   </head>
   <body>
-    <h1>{{ title }} works!</h1>
+    <h1> {{ title }}</h1>
     <div class="">
       {% for i in object_list %}
 
-      {{ i.title }}<br>
+      <a href="/posts/{{ i.id }}/">{{ i.title }}</a><br>
       {{ i.id }}<br>
       {{ i.content }}<br>
       {{ i.timestamp }}<br>
