@@ -2,9 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template Gulftown</title>
+    <title>Post list</title>
   </head>
   <body>
-    <h1>Template works!</h1>
+    <h1> {{ title }}</h1>
+    <div class="">
+      {% for i in object_list %}
+
+      <a href="/posts/{{ i.id }}">{{ i.title }}</a><br>
+      {{ i.id }}<br>
+      {{ i.content }}<br>
+      {{ i.timestamp }}<br>
+      {{ i.updated }}<br><br><br>
+
+      {% endfor %}
+    </div>
   </body>
 </html>

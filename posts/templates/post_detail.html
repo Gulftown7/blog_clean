@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Post detail</title>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+
+    {% for instance in object_list %}
+
+    {{ instance.id }}<br>
+    {{ instance.content }}<br>
+    {{ instance.timestamp }}<br>
+    {{ instance.updated }}<br><br><br>
+
+    {%  endfor %}
+  </body>
+</html>
