@@ -7,13 +7,14 @@
   <body>
     <h1>{{ title }}</h1>
 
-    {% for instance in object_list %}
 
+
+    {{ instance.title }}<br>
     {{ instance.id }}<br>
     {{ instance.content }}<br>
     {{ instance.timestamp }}<br>
     {{ instance.updated }}<br><br><br>
 
-    {%  endfor %}
+    
   </body>
 </html>
